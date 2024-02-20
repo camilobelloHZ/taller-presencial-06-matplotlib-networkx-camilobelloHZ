@@ -1,4 +1,6 @@
 .DS_Store
+countries.csv
+network.png
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
