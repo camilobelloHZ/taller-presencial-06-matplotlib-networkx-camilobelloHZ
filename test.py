@@ -18,6 +18,8 @@ if not os.path.exists("countries.csv"):
 dataframe = pd.read_csv("countries.csv")
 dataframe = dataframe.set_index("countries")
 
+print(dataframe)
+
 assert dataframe["United States of America"] == 579
 assert dataframe["China"] == 273
 assert dataframe["India"] == 174
