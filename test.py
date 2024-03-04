@@ -4,9 +4,9 @@ import os
 
 import pandas as pd
 
-from country_collaboration import main
+import country_collaboration
 
-main(20)
+country_collaboration.main(20)
 
 #
 # Retorna error si la carpeta output/ no existe
@@ -16,13 +16,13 @@ if not os.path.exists("countries.csv"):
 #
 # Lee el contenido del archivo output.txt
 dataframe = pd.read_csv("countries.csv")
-dataframe = dataframe.set_index("country")
+dataframe = dataframe.set_index("countries")
 
-assert dataframe["United States of America"] == 579
-assert dataframe["China"] == 273
-assert dataframe["India"] == 174
-assert dataframe["United Kingdom"] == 173
-assert dataframe["Italy"] == 112
+assert dataframe["count"]["United States"] == 579
+assert dataframe["count"]["China"] == 273
+assert dataframe["count"]["India"] == 174
+assert dataframe["count"]["United Kingdom"] == 173
+assert dataframe["count"]["Italy"] == 112
 
 #
 #
