@@ -20,7 +20,7 @@ dataframe = dataframe.set_index("countries")
 
 print(dataframe)
 
-assert dataframe["United States of America"] == 579
+assert dataframe["United States"] == 579
 assert dataframe["China"] == 273
 assert dataframe["India"] == 174
 assert dataframe["United Kingdom"] == 173
